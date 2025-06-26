@@ -2,80 +2,93 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shop Acc Game FF - Hùng Akira Style</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GKDM Shop - Bán Acc Free Fire Uy Tín</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f7f7;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    .container {
+      padding: 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .top-nap {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    .top-nap h2 {
+      margin-top: 0;
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <div class="logo">🔥Shop FF Hùng Akira🔥</div>
-    <nav>
-      <a href="#" class="nav-link active" data-section="home">Trang chủ</a>
-      <a href="#" class="nav-link" data-section="nap-tien">Nạp tiền</a>
-      <a href="#" class="nav-link" data-section="top-nap">Top nạp</a>
-    </nav>
+    <h1>GKDM Shop</h1>
+    <p>Shop bán acc Free Fire uy tín - nạp tiền auto</p>
   </header>
 
-  <main>
-    <section id="home" class="section active">
-      <div class="hero">
-        <h1>Chào mừng đến với Shop Acc Free Fire giá rẻ, uy tín!</h1>
-        <p>Giao acc nhanh chóng 24/7, thanh toán tiện lợi.</p>
-      </div>
+  <nav>
+    <a href="index.html">Trang Chủ</a>
+    <a href="mua-acc.html">Mua Acc</a>
+    <a href="naptien.html">Nạp Tiền</a>
+    <a href="topnap.html">Top Nạp</a>
+    <a href="admin.html">Admin</a>
+  </nav>
 
-      <div class="products">
-        <h2>Danh sách acc game</h2>
-        <div class="product-list">
-          <!-- Mẫu acc -->
-          <div class="product-card">
-            <h3>Acc FF Vip #001</h3>
-            <p>Rank: Grandmaster | Giá: 100k</p>
-            <button class="btn-buy" data-product="Acc FF Vip #001" data-price="100000">Mua ngay</button>
-          </div>
-          <div class="product-card">
-            <h3>Acc FF Vip #002</h3>
-            <p>Rank: Legendary | Giá: 150k</p>
-            <button class="btn-buy" data-product="Acc FF Vip #002" data-price="150000">Mua ngay</button>
-          </div>
-          <div class="product-card">
-            <h3>Acc FF Vip #003</h3>
-            <p>Rank: Heroic | Giá: 200k</p>
-            <button class="btn-buy" data-product="Acc FF Vip #003" data-price="200000">Mua ngay</button>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="container">
+    <div class="section">
+      <h2>Chào mừng đến với GKDM Shop</h2>
+      <p>Chúng tôi chuyên cung cấp tài khoản Free Fire chất lượng, giá rẻ. Giao dịch tự động và nhanh chóng.</p>
+    </div>
 
-    <section id="nap-tien" class="section">
-      <h2>Nạp tiền vào tài khoản</h2>
-      <p>Chuyển khoản vào số tài khoản: <b>0977049795</b> - MB Bank</p>
-      <p>Chủ tài khoản: <b>Đinh Hồng Hạnh</b></p>
-      <p>Nội dung chuyển khoản: <b>tên tài khoản của bạn</b></p>
-
-      <form id="form-nap-tien">
-        <label for="username-nap">Tên tài khoản:</label>
-        <input type="text" id="username-nap" required />
-
-        <label for="amount-nap">Số tiền nạp (VNĐ):</label>
-        <input type="number" id="amount-nap" required min="1000" step="1000" />
-
-        <button type="submit">Gửi yêu cầu nạp tiền</button>
-      </form>
-
-      <div id="nap-tien-result"></div>
-    </section>
-
-    <section id="top-nap" class="section">
-      <h2>Top người nạp nhiều nhất</h2>
-      <ol id="top-nap-list">
-        <li>Đang tải dữ liệu...</li>
+    <div class="section top-nap">
+      <h2>Top Nạp Gần Đây</h2>
+      <ol>
+        <li>🔥 Ngọc FF - 1.000.000đ</li>
+        <li>🔥 Tuấn Vip - 500.000đ</li>
+        <li>🔥 Dũng Pro - 300.000đ</li>
       </ol>
-    </section>
-  </main>
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 Shop FF Hùng Akira - Bản quyền thuộc về bạn
+    <p>© 2025 GKDM Shop. All rights reserved.</p>
   </footer>
 
 </body>
