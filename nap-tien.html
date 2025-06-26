@@ -2,56 +2,32 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Nạp tiền | Shop Free Fire</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: Arial; background: #f2f2f2; padding: 20px; }
-    .form-container { background: #fff; padding: 20px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    input, button { width: 100%; padding: 12px; margin-top: 10px; font-size: 16px; }
-    button { background-color: #28a745; color: white; border: none; cursor: pointer; }
-    button:hover { background-color: #218838; }
-    h2 { text-align: center; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nạp tiền - GKDM Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="form-container">
-    <h2>Nạp Tiền</h2>
-    <input type="text" id="username" placeholder="Tên người dùng">
-    <input type="number" id="amount" placeholder="Số tiền (VNĐ)">
-    <input type="text" id="noidung" placeholder="Nội dung chuyển khoản (ví dụ: NAP123456)">
-    <button onclick="napTien()">Nạp Tiền</button>
-    <p id="status"></p>
-  </div>
+  <header>
+    <img src="images/logo.png" alt="Logo Shop" class="logo">
+    <nav>
+      <a href="index.html">Trang Chủ</a>
+      <a href="naptien.html">Nạp Tiền</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
 
-  <!-- Firebase Script -->
-  <script src="firebase.js"></script>
-  <script>
-    function napTien() {
-      const username = document.getElementById('username').value.trim();
-      const amount = parseInt(document.getElementById('amount').value);
-      const noidung = document.getElementById('noidung').value.trim();
-      const status = document.getElementById('status');
+  <section class="naptien">
+    <h2>💳 NẠP TIỀN TỰ ĐỘNG</h2>
+    <p>Sử dụng app ngân hàng để quét mã QR dưới đây:</p>
+    <img src="images/qr-mbbank.png" alt="QR MB Bank" class="qr">
+    <p><b>Ngân hàng:</b> MB Bank</p>
+    <p><b>Chủ tài khoản:</b> Đinh Hồng Hạnh</p>
+    <p><b>Số tài khoản:</b> 0977049795</p>
+    <p><b>Nội dung chuyển khoản:</b> naptien-[SĐT hoặc Tên tài khoản]</p>
+  </section>
 
-      if (!username || !amount || !noidung) {
-        status.innerText = "Vui lòng điền đầy đủ thông tin!";
-        status.style.color = "red";
-        return;
-      }
-
-      const userRef = firebase.database().ref('users/' + username);
-      userRef.once('value').then(snapshot => {
-        const currentData = snapshot.val();
-        const newBalance = (currentData && currentData.sodu ? currentData.sodu : 0) + amount;
-        userRef.set({
-          ten: username,
-          sodu: newBalance,
-          noidung: noidung,
-          lastNap: new Date().toLocaleString()
-        });
-        status.innerText = "Nạp tiền thành công! Số dư mới: " + newBalance + "đ";
-        status.style.color = "green";
-      });
-    }
-  </script>
+  <footer>
+    <p>&copy; 2025 GKDM Shop. All rights reserved.</p>
+  </footer>
 </body>
 </html>
